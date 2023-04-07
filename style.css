@@ -24,37 +24,43 @@ https://www.figma.com/file/LhfPag77j58PtWrVpORzOD/DD-%2F-Countdown-(Copy)?node-i
 body {
     height: 100vh;    
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 
-.imagem-fundo, .imagem-fundo img{
-    position: fixed;
-    bottom: 0;
+.img_fundo{
     width: 100vw;
 }
 
-.imagem-topo, .imagem-topo img{
-    position: fixed;
-    top: 0;
-    width: 100vw;
+.imagem {
+    width: 50%;
+    height: 100%;
 }
 
-.timer, .imagem {
-    width: 40%;
+.principal{
+    display: flex;
+    height: 100%;
+    gap: 60px;
 }
 
 .timer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
+    width: 50%;
+    height: 100%;
 }
 
 .timer h1{
     color: var(--purple);
-    font-size: 2.5em;
+    font-size: 2.3em;
+    font-weight: 900;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 .area_cronometro {
@@ -69,7 +75,8 @@ body {
 
 .cronometro_titulo {
     color: var(--light-grey);
-    font-size: 16px;
+    font-size: 14px;
+    text-transform: capitalize;
 }
 
 .dias,.horas,.minutos,.segundos {
@@ -77,20 +84,15 @@ body {
     font-size: 5em;
 }
 
-.separador{
-    position: relative;
-}
-
-.separador::after {
-    content: ':';
+.separador {
     font-size: 5em;
-    position: absolute;
     color: var(--black);
-
+    margin: 20px 10px 0px 10px;
 }
 
 .instruções {
     color: var(--text-color);
+    font-size: 14px;
 }
 
 .inscrever {
@@ -102,4 +104,5 @@ body {
     border-radius: 10px;
     font-size: 1em;
     font-weight: 300;
+    margin-top: 10px;
 }
