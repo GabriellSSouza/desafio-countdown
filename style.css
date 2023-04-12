@@ -5,7 +5,7 @@ https://efficient-sloth-d85.notion.site/Desafio-Countdown-4572ce6f5c91469abe0171
 https://www.figma.com/file/LhfPag77j58PtWrVpORzOD/DD-%2F-Countdown-(Copy)?node-id=0-1&t=Q29VBVZbo68OHOeR-0
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 :root {
     --black: #4D4C59;
@@ -57,8 +57,8 @@ body {
 
 .timer h1{
     color: var(--purple);
-    font-size: 2.3em;
-    font-weight: 900;
+    /* font-size: 2.3em; */
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 5px;
 }
