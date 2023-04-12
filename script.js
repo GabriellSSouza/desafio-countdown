@@ -3,27 +3,36 @@ const mostrar_horas = document.querySelector('.horas')
 const mostrar_minutos = document.querySelector('.minutos')
 const mostrar_segundos = document.querySelector('.segundos')
 
-// fazer as horas com IFs que controlam até onde eles podem chegar assim quando chegar no limite um valor é passado para outro variável. Exemplo: quando as horas chegarem a 00 o dia o dia diminuí 1.
-
-// duas formas de controlam o tempo. class Date e setInterval/setTimeout
-
-let Cseconds = 59;
-let Cminutos = 0;
+let Csegundos = 59;
+let Cminutos = 59;
+let Choras = 23;
+let Cdias = 30;
 
 function contador(){
-    if(Cseconds<0){
-        Cseconds= 59
-        Cminutos++
+    
+    if(Csegundos<0){
+        Csegundos= 59
+        Cminutos--
     }
-    console.log(Cseconds)
-    Cseconds--
+    if(Cminutos<0){
+        Choras--
+        Cminutos = 59
+    }
+    if(Choras<0){
+        Choras = 23
+        Cdias--
+    }
+    if(Cdias<0){
+        Cdias = 30
+    }
+
+    mostrar_dias.innerHTML = Cdias<10?'0'+Cdias:Cdias
+    mostrar_horas.innerHTML = Choras<10?'0'+Choras:Choras
+    mostrar_minutos.innerHTML = Cminutos<10?'0'+Cminutos:Cminutos
+    mostrar_segundos.innerHTML = Csegundos<10?'0'+Csegundos:Csegundos
+
+    Csegundos--
 
     setTimeout(contador,1000)
 }
 contador()
-
-function gerarMinutos(){
-
-   
-}
-
